@@ -12,6 +12,7 @@ public class GameManagerLevel2 : MonoBehaviour
     [SerializeField] public bool FBLABirdStartGame = false;
     [SerializeField] private Animator FBLABirdAnimator;
     [SerializeField] private GameObject StartBox;
+    [SerializeField] private GameObject Score;
 
 
     private void Update()
@@ -26,6 +27,7 @@ public class GameManagerLevel2 : MonoBehaviour
             {
                 FBLABirdStartGame = true;
                 StartBox.SetActive(false);
+                FBLABird.GetComponent<FBLABird>().gameOver = false;
             }
         }
 
@@ -40,5 +42,18 @@ public class GameManagerLevel2 : MonoBehaviour
         FBLABird.SetActive(true);
 
         StartBox.SetActive(true);
+        Score.SetActive(true);
+    }
+    public void GameOver()
+    {
+        FBLABirdAnimator.SetBool("Up", true);
+        FBLABirdAnimator.SetBool("Down", false);
+
+        Chain1.SetActive(false);
+        Chain2.SetActive(false);
+        FBLABird.SetActive(false);
+
+        StartBox.SetActive(false);
+        Score.SetActive(false);
     }
 }
