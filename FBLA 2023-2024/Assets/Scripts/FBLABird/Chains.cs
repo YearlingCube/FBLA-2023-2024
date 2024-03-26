@@ -9,11 +9,15 @@ public class Chains : MonoBehaviour
 
     [SerializeField] private GameManagerLevel2 GM;
 
+    private Vector3 spawn;
+
 
     private void Start()
     {
         speed = -speed;
+        spawn = transform.position;
         this.transform.position = new Vector3(transform.position.x, Random.Range(-3.58f, -0.68f), 0);
+
     }
     void Update()
     {
@@ -26,6 +30,10 @@ public class Chains : MonoBehaviour
 
             }
         }
+    }
+    public void ResetChain()
+    {
+        this.transform.position = spawn;
     }
     
 }

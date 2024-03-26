@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -15,7 +16,6 @@ public class FBLABird : MonoBehaviour
     [SerializeField]
     private SpriteRenderer SR;
 
-    private Score score;
 
     public Sprite Flap;
     public Sprite NotFlap;
@@ -72,6 +72,15 @@ public class FBLABird : MonoBehaviour
         if (collision.gameObject.tag == "Chain")
         {
             GameOver();
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Goal")
+        {
+            Debug.Log("Score Add");
+            GM.AddScore();
         }
     }
 }
