@@ -20,17 +20,20 @@ public class GameManagerLevel2 : MonoBehaviour
     [SerializeField] private NPC currentNPC;
     [SerializeField] private int currentNPCIndex = 0;
 
+    public bool NPCReady = false;
+
 
     private void Start()
     {
         currentNPC = NPCS[0];
+        currentNPC.StartMove();
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(NPCReady)
         {
             currentNPC.StartMove();
-
+            NPCReady = false;
         }
         if (StartBox.activeSelf == true)
         {
@@ -86,6 +89,7 @@ public class GameManagerLevel2 : MonoBehaviour
 
         Debug.Log("- - NPC Math - -");
         currentNPCIndex += 1;
+        Debug.Log(currentNPCIndex > NPCS.Length);
         if (currentNPCIndex >= NPCS.Length)
         {
             currentNPC.EndMoveBool = true;

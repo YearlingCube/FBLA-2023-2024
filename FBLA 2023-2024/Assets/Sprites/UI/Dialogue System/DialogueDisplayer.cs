@@ -38,6 +38,21 @@ public class DialogueDisplayer : MonoBehaviour
         dialogueBox.SetActive(false);
         sender.BirdGame = true;
     }
+    private IEnumerator MoveThroughDialogue3(DialogueObject dialogueObject, NPC sender)
+    {
+        dialogueBox.SetActive(true);
+        for (int i = 0; i < dialogueObject.dialogueLines.Length; i++)
+        {
+            dialogueText.text = dialogueObject.dialogueLines[i].dialogue;
+
+            //The following line of code makes it so that the for loop is paused until the user clicks the left mouse button.
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            //The following line of code makes the coroutine wait for a frame so as the next WaitUntil is not skipped
+            yield return null;
+        }
+        dialogueBox.SetActive(false);
+        sender.EndMoveBool2 = true;
+    }
     public void DisplayDialogue(DialogueObject dialogueObject)
     {
         StartCoroutine(MoveThroughDialogue(dialogueObject));
@@ -45,5 +60,9 @@ public class DialogueDisplayer : MonoBehaviour
     public void DisplayDialogue2(DialogueObject dialogueObject, NPC sender)
     {
         StartCoroutine(MoveThroughDialogue2(dialogueObject, sender));
+    }
+    public void DisplayDialogue3(DialogueObject dialogueObject, NPC sender)
+    {
+        StartCoroutine(MoveThroughDialogue3(dialogueObject, sender));
     }
 }

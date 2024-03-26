@@ -24,8 +24,14 @@ public class FBLABird : MonoBehaviour
     public float animationTime = 3;
     private float waitTime;
 
+    Vector3 spawn;
+
     public bool gameOver = false;
 
+    private void Start()
+    {
+        spawn = transform.position;
+    }
     private void Update()
     {
         if (!gameOver)
@@ -64,6 +70,7 @@ public class FBLABird : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
         gameOver = true;
+        transform.position = spawn;
         GM.GameOver();
         Debug.Log("Game Over");
     }

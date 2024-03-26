@@ -11,20 +11,27 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameManagerLevel2 GM;
     public bool BirdGame = false;
     public bool EndMoveBool = false;
+    public bool EndMoveBool2 = false;
 
     public void StartMove()
     {
         animator.SetBool("Start", true);
     }
-    public void DisplayStart()
+    public void DisplayStart()  
     {
         Debug.Log("Play Dialogue");
         DD.DisplayDialogue2(startDialogue, this);
+    }
+    public void DisplayEnd()
+    {
+        Debug.Log("Play Dialogue");
+        DD.DisplayDialogue3(endDialogue, this);
     }
     public void EndMove()
     {
         animator.SetBool("Start", false);
         animator.SetBool("End", true);
+        GM.NPCReady = true;
     }
     private void Update()
     {
@@ -33,7 +40,15 @@ public class NPC : MonoBehaviour
             GM.FBLABirdStart();
             BirdGame = false;
         }
-        if(EndMoveBool)
+        if (EndMoveBool)
+        {
+            DisplayEnd();
+            EndMoveBool = false;
+        }
+        if (EndMoveBool2)
+        {
             EndMove();
+            EndMoveBool2 = false;
+        }
     }
 }
