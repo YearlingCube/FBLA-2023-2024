@@ -53,6 +53,22 @@ public class DialogueDisplayer : MonoBehaviour
         dialogueBox.SetActive(false);
         sender.EndMoveBool2 = true;
     }
+    private IEnumerator MoveThroughDialogue4(DialogueObject dialogueObject, NpcDialogueScript sender)
+    {
+        dialogueBox.SetActive(true);
+        for (int i = 0; i < dialogueObject.dialogueLines.Length; i++)
+        {
+            dialogueText.text = dialogueObject.dialogueLines[i].dialogue;
+
+            //The following line of code makes it so that the for loop is paused until the user clicks the left mouse button.
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            //The following line of code makes the coroutine wait for a frame so as the next WaitUntil is not skipped
+            yield return null;
+        }
+        dialogueBox.SetActive(false);
+        sender.Dialogue = true;
+        sender.talkingbool = false;
+    }
     public void DisplayDialogue(DialogueObject dialogueObject)
     {
         StartCoroutine(MoveThroughDialogue(dialogueObject));
@@ -64,5 +80,9 @@ public class DialogueDisplayer : MonoBehaviour
     public void DisplayDialogue3(DialogueObject dialogueObject, NPC sender)
     {
         StartCoroutine(MoveThroughDialogue3(dialogueObject, sender));
+    }
+    public void DisplayDialogue4(DialogueObject dialogueObject, NpcDialogueScript sender)
+    {
+        StartCoroutine(MoveThroughDialogue4(dialogueObject, sender));
     }
 }

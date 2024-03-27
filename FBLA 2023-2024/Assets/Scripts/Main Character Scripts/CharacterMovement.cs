@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float playerSpeed = 1;
+    [SerializeField] public bool talking = false;
     void Awake()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -19,8 +20,8 @@ public class CharacterMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            
-            rb.MovePosition(rb.position + (new Vector2(x, y) * playerSpeed * Time.deltaTime));
+            if(!talking) 
+                rb.MovePosition(rb.position + (new Vector2(x, y) * playerSpeed * Time.deltaTime));
         }
     }
     
