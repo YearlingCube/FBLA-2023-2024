@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerLevel1 : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class GameManagerLevel1 : MonoBehaviour
     [SerializeField] private Animator Fade;
     [SerializeField] private Fade fadeScript;
     [SerializeField] private TextMeshProUGUI NPCCount;
+    [SerializeField] private GameObject InstructionsMenu;
     private int count = 0;
     private void Update()
     {
+        if(InstructionsMenu.active == true)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                InstructionsMenu.SetActive(false);
+            }
+        }
         if (npcs[0].Dialogue == true && npcs[1].Dialogue == true && npcs[2].Dialogue == true && npcs[3].Dialogue == true)
         {
             NPCSDone();
