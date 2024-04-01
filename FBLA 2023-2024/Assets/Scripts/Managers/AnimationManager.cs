@@ -8,6 +8,12 @@ public class AnimationManager : MonoBehaviour
     [SerializeField] private DialogueObject CD;
     [SerializeField] private GameObject FlashScreen;
 
+    // Objects that need to Disapear
+    [SerializeField] private GameObject Judge;
+    // Objects that need to Appear
+    [SerializeField] private GameObject DeskRubble;
+    [SerializeField] private GameObject BrokenWall;
+
     public bool FlashBegin = false;
     public void StartDialogueWithJudge()
     {
@@ -17,6 +23,7 @@ public class AnimationManager : MonoBehaviour
     {
         Debug.Log("FLASH!!!!");
         FlashScreen.SetActive(true);
+
     }
     private void Update()
     {
