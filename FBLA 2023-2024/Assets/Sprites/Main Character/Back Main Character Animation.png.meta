@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8668ec4c77408d64683462da16eb3151
+guid: 360767f19f71e37438ed356381e441b2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pencil Animation_0
+      name: Back Main Character Animation_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1984
-        height: 1984
+        width: 1056
+        height: 1056
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f68078941f104347be47bde2dfbc69a
-      internalID: -1363257591
+      spriteID: 1cd7f48712e12ca4581fcca85ff4e76e
+      internalID: 1369679312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pencil Animation_1
+      name: Back Main Character Animation_1
       rect:
         serializedVersion: 2
-        x: 1984
+        x: 1056
         y: 0
-        width: 1984
-        height: 1984
+        width: 1056
+        height: 1056
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,71 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 918a6f8604661614b8dd31ad697c077b
-      internalID: -1024905260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pencil Animation_2
-      rect:
-        serializedVersion: 2
-        x: 3968
-        y: 0
-        width: 1984
-        height: 1984
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ee49658e3cf1fc428de3ae79f181d8e
-      internalID: -547146355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pencil Animation_3
-      rect:
-        serializedVersion: 2
-        x: 5952
-        y: 0
-        width: 1984
-        height: 1984
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6425c5e37eebfd346841720107c65092
-      internalID: -1100133689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pencil Animation_4
-      rect:
-        serializedVersion: 2
-        x: 7936
-        y: 0
-        width: 1984
-        height: 1984
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 045d5dec2b35f444da3a512220aa6a9e
-      internalID: -1662555847
+      spriteID: 76b128554a2d7b044ae069116d6c9b77
+      internalID: 869487389
       vertices: []
       indices: 
       edges: []
@@ -232,11 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pencil Animation_3: -1100133689
-      Pencil Animation_4: -1662555847
-      Pencil Animation_0: -1363257591
-      Pencil Animation_1: -1024905260
-      Pencil Animation_2: -547146355
+      Back Main Character Animation_1: 869487389
+      Back Main Character Animation_0: 1369679312
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

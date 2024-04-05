@@ -5,12 +5,6 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField]
-    private Sprite Player_UpIdle;
-    [SerializeField]
-    private Sprite Player_DownIdle;
-    [SerializeField]
-    private Sprite Player_SideIdle;
-    [SerializeField]
     private Animator PlayerAnimator;
 
 
