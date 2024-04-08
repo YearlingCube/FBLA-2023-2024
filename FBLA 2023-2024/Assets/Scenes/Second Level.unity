@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CONGRATULATION
+  m_text: CONGRATULATIONS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 595a4d1fd3c0f734aa9ec15c8421a215, type: 2}
   m_sharedMaterial: {fileID: 7519412187249497842, guid: 595a4d1fd3c0f734aa9ec15c8421a215, type: 2}
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: U Lost :(
+  m_text: YOU LOST :(
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 595a4d1fd3c0f734aa9ec15c8421a215, type: 2}
   m_sharedMaterial: {fileID: 7519412187249497842, guid: 595a4d1fd3c0f734aa9ec15c8421a215, type: 2}
