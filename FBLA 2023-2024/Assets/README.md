@@ -7,8 +7,15 @@
 ### Aaron Baker - Game Design
 
 # Core Game 
-### You play as a FBLA President Where You Have to Find and Recruit Students, Fundraise & and Participate in the FBLA Competition.
-### There is a Main Boss Who is a ReadMe File as We Keep Forgetting the ReadMe File.
+### In the game of FBLA, we gather our crew,
+### Seeking members bright, and dreams anew.
+### Next, funds we seek, a challenge to pursue,
+### For the competition, our dreams are in view.
+### -
+### Nailing the presentation, our ultimate test,
+### In this game of wits, we'll strive for the best.
+### FBLA's quest, we'll meet with zest,
+### Gathering, funding, and presenting, we'll bring our best.
 
 # Thank You! For Looking or Playing Our Game!
 
