@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Start3
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Start Number 3
+  - dialogue: Heya Man!
+  - dialogue: Money? Well aren't you in luck I got some right here!

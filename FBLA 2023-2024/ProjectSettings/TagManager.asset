@@ -7,6 +7,8 @@ TagManager:
   - Border
   - Chain
   - Goal
+  - Boss
+  - Characters
   layers:
   - Default
   - TransparentFX

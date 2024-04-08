@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Start4
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: 'Caca
+  - dialogue: 'Huh? Me? Money?
 
 '
+  - dialogue: Let me ask my dad.

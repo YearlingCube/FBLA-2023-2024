@@ -10,24 +10,29 @@ public class GameManagerLevel2 : MonoBehaviour
     [SerializeField] private GameObject Chain2;
     [SerializeField] private GameObject FBLABird;
     [SerializeField] private GameObject Stand;
-    [SerializeField] public bool FBLABirdStartGame = false;
+    
+    [SerializeField] private TextMeshProUGUI ScoreText;
+    
+    [SerializeField] GameObject WinScreen;
+    [SerializeField] GameObject LoseScreen;
+    [SerializeField] GameObject InstructionsScreen;
+
     [SerializeField] private Animator FBLABirdAnimator;
     [SerializeField] private GameObject StartBox;
     [SerializeField] private GameObject Score;
+
+    [SerializeField] public bool FBLABirdStartGame = false;
+    
     [SerializeField] public int score = 0;
     [SerializeField] public int totalScore = 0;
+    [SerializeField] public int scoreToBeat = 15;
+
     [SerializeField] private NPC[] NPCS;
     [SerializeField] private NPC currentNPC;
     [SerializeField] private int currentNPCIndex = 0;
 
     public bool NPCReady = false;
 
-
-    private void Start()
-    {
-        currentNPC = NPCS[0];
-        currentNPC.StartMove();
-    }
     private void Update()
     {
         if(NPCReady)
@@ -42,6 +47,16 @@ public class GameManagerLevel2 : MonoBehaviour
                 FBLABirdStartGame = true;
                 StartBox.SetActive(false);
                 FBLABird.GetComponent<FBLABird>().gameOver = false;
+            }
+        }
+        ScoreText.text = "$" + totalScore*100 + "/$" + scoreToBeat * 100;
+        if(InstructionsScreen.active)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                InstructionsScreen.SetActive(false);
+                currentNPC = NPCS[0];
+                currentNPC.StartMove();
             }
         }
 
@@ -102,7 +117,15 @@ public class GameManagerLevel2 : MonoBehaviour
     }
     void NPCDone()
     {
-        Debug.Log("NPCS Done!");
+        if(totalScore >= scoreToBeat)
+        {
+            WinScreen.SetActive(true);
+        }
+        else
+        {
+            LoseScreen.SetActive(true);
+        }
+
     }
     public void AddScore()
     {

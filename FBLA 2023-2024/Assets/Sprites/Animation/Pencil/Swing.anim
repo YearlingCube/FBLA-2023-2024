@@ -21,13 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1363257591, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
-    - time: 0.05
-      value: {fileID: -1024905260, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
     - time: 0.1
+      value: {fileID: -1024905260, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
+    - time: 0.18333334
       value: {fileID: -547146355, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
-    - time: 0.15
+    - time: 0.26666668
       value: {fileID: -1100133689, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
-    - time: 0.2
+    - time: 0.36666667
       value: {fileID: -1662555847, guid: 8668ec4c77408d64683462da16eb3151, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.21666667
+    m_StopTime: 0.38333336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -77,4 +77,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.18333334
+    functionName: Shoot
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.36666667
+    functionName: switchState
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

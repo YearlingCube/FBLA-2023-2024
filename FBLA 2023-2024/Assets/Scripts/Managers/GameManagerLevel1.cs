@@ -39,7 +39,7 @@ public class GameManagerLevel1 : MonoBehaviour
     public void NPCSDone()
     {
         Debug.Log("WIN on to the next level!");
-        Fade.SetBool("FadeOut", true);
+        Fade.SetTrigger("FadeIn");
     }
     
 }

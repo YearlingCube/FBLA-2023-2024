@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Start2
   m_EditorClassIdentifier: 
   dialogueLines:
-  - dialogue: Hello Gay Boi!
+  - dialogue: Hey...
+  - dialogue: Money? Ok..
