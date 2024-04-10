@@ -10,35 +10,35 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
 
             PlayerAnimator.SetBool("PlayerBackWalk", true);
         }
-        else if (Input.GetKeyUp(KeyCode.W))
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             PlayerAnimator.SetBool("PlayerBackWalk", false);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             PlayerAnimator.SetBool("PlayerFrontWalk", true);
-        }else if(Input.GetKeyUp(KeyCode.S)) 
+        }else if(Input.GetKeyUp(KeyCode.DownArrow)) 
         {
             PlayerAnimator.SetBool("PlayerFrontWalk", false);
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             PlayerAnimator.SetBool("PlayerSideWalk", true);
             this.GetComponent<SpriteRenderer>().flipX = false;
-        }else if (Input.GetKeyUp(KeyCode.D)) 
+        }else if (Input.GetKeyUp(KeyCode.RightArrow)) 
         {
             PlayerAnimator.SetBool("PlayerSideWalk", false);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             PlayerAnimator.SetBool("PlayerSideWalk", true);
             this.GetComponent<SpriteRenderer>().flipX = true;
-        }else if(Input.GetKeyUp(KeyCode.A))
+        }else if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
             PlayerAnimator.SetBool("PlayerSideWalk", false);
         }
